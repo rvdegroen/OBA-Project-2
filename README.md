@@ -1,6 +1,6 @@
-# About
+# About & original repository
 
-This is a school project for the minor Web Development at Amsterdam University of Applied Sciences. The rest of this readme will be written in dutch (sorry, not sorry). 
+This is a school project for the minor Web Development at Amsterdam University of Applied Sciences. The rest of this readme will be written in dutch (sorry, not sorry). This is a resit repository, the previous repository can be found [here](https://github.com/rvdegroen/OBA-project). This is basically an improved version of the previous repository. 
 
 <img width="947" alt="image" src="https://github.com/rvdegroen/OBA-project/assets/90154152/38ee2950-9612-433f-8924-751fe57c25d7">
 
