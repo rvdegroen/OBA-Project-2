@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"style.css"}
+{"version":3,"sources":["..\\style.scss","style.css"],"names":[],"mappings":"AAAQ,wBAAA;AAER;EACI,sBAAA;EACA,SAAA;EACA,UAAA;ACAJ;;ADGA;EACI,uBAAA;ACAJ","file":"style.css","sourcesContent":["@import url('./nav.css');\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody {\r\n    scroll-behavior: smooth;\r\n}\r\n","@import url(\"./nav.css\");\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  scroll-behavior: smooth;\n}"]}
