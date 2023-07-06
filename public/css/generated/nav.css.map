@@ -1,1 +1,1 @@
-{"version":3,"sources":["..\\nav.scss","nav.css"],"names":[],"mappings":"AAAA;EACI,qBAAA;ACCJ","file":"nav.css","sourcesContent":["body {\r\n    background-color: red;\r\n}\r\n","body {\n  background-color: red;\n}"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"nav.css"}
