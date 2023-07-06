@@ -1,0 +1,19 @@
+// virtual-assistent (mobile) and introduction (desktop)
+
+// mobile
+.introduction {
+    display: none;
+}
+
+// desktop
+@media (min-width: 1000px) {
+    .introduction {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 35vw;
+           
+        }
+    }
+}
