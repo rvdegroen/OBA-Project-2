@@ -1,11 +1,37 @@
 @import url('./nav.css');
 
+// variable colors
+:root {
+    --bg: #f9f9f9;
+    --headings: #3c389e;
+    --secondary: #00000083;
+
+    // shadows
+    --shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
+
+    // primary button
+    --primary-bg: #3c389e;
+    --primary-text: #ffffff;
+
+    // secondary button
+    --secondary-bg: #ffffff;
+    --secondary-text: #292929;
+}
+
+// reset standard styling
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+// to scroll smooth
 body {
     scroll-behavior: smooth;
+    background-color: var(--bg);
+}
+
+// to remove/add elements
+.hidden {
+    display: none;
 }
