@@ -3,13 +3,6 @@ export function renderResults(results) {
     document.getElementById('parent_results').classList.remove('hidden');
     const resultsDiv = document.getElementById('results');
 
-    // hiden paragraph-container & stick when searching for books and stufss
-    document.getElementById('paragraph-container').classList.add('hidden');
-    document.querySelector('.stick').classList.add('hidden');
-
-    // hide faq when you search
-    document.querySelector('.faq-wrapper').classList.add('hidden');
-
     resultsDiv.innerHTML = ''; // Clear previous results
 
     const resultsGroupedByFormat = {};
@@ -35,7 +28,6 @@ export function renderResults(results) {
         resultsDiv.append(heading);
 
         const resultContainer = document.createElement('div');
-        resultContainer.classList.add('results-container'); // TODO
 
         for (let searchResult of resultsByFormat) {
             // creating js elements
@@ -56,6 +48,7 @@ export function renderResults(results) {
             container.setAttribute('href', `/details/${searchResult.id}`); // go to /details/${object.id}
 
             // appends
+
             container.appendChild(div);
             div.appendChild(imageContainer);
             imageContainer.appendChild(image);
@@ -72,12 +65,10 @@ export function renderResults(results) {
             titleHeading.textContent = bookTitle;
             authorParagraph.textContent = authors;
 
-            // adding classes
-            div.classList.add('book-container');
-            imageContainer.classList.add('image-container');
-            detailDiv.classList.add('detail-div');
-            imageContainer.classList.add('image-container');
-            detailDiv.classList.add('detail-div');
+            // adding classes for styling
+            div.classList.add('resultContainer');
+            imageContainer.classList.add('imageContainer');
+            detailDiv.classList.add('detailContainer');
         }
 
         resultsDiv.append(resultContainer);

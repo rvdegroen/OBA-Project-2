@@ -7,65 +7,47 @@
 
     <body>
         <%- include("../partials/nav");%>
-        <h1 class="oba-title">OBA Catalogus</h1>
+        <h1>OBA Catalogus</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
         <!-- animation image -->
-        <div class="introduction">
+        <div>
             <img
                 src="/images/character/animation/frame1.png"
                 alt="circle for animation"
-                class="introduction_image"
             />
         </div>
 
-        <div class="chat-icon">
-            <div id="paragraph-container"></div>
-            <div class="stick"></div>
-        </div>
-
         <!-- results, check renderResult for elements -->
-        <div id="parent_results" class="hidden">
+        <div id="parent_results">
             <div id="results">
                 <!-- <h2>Hello</h2> -->
             </div>
         </div>
 
-        <div class="arrow-container">
-            <div class="double-arrow"></div>
-        </div>
-
-        <div class="faq-wrapper hidden">
-            <div class="chat_faq">
-                <div>
-                    <h4>Meeste gestelde vragen</h4>
-                    <button id="close-button"><span>x</span></button>
-                </div>
-
-                <ul>
-                    <li><a href="#">Ik zoek een boek over koken</a></li>
-                    <li><a href="#">Ik zoek een boek over Harry Potter</a></li>
-                    <li><a href="#">Ik zoek een cursus over Spaans</a></li>
-                    <li><a href="#">Ik zoek een kinderboek</a></li>
-                </ul>
-            </div>
-        </div>
-
         <!-- chat bar -->
-        <div class="chat">
+        <div>
             <!-- frequently asked questions -->
 
-            <div class="chat_bar">
+            <div>
                 <input
+                    list="faq"
                     type="text"
                     name="query"
                     placeholder="Wat zoek je in de bieb?"
                     id="query"
-                    class="chat_bar_input"
+                    autocomplete="off"
                 />
-                <button type="submit" id="searchButton" class="chat_bar_button">
-                    Zoek
-                </button>
+
+                <datalist id="faq">
+                    <option value="Chocolate"></option>
+                    <option value="Coconut"></option>
+                    <option value="Mint"></option>
+                    <option value="Strawberry"></option>
+                    <option value="Vanilla"></option>
+                </datalist>
+
+                <button type="submit" id="searchButton">Zoek</button>
             </div>
         </div>
     </body>
