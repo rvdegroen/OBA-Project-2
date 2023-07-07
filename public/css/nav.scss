@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    margin: 20px;
+
+    // logo container
+    .logo-container {
+        flex-grow: 1;
+        img {
+            height: 30px;
+        }
+    }
+
+    // mobile assistent container, not visible on desktop
+    .mobile-container {
+        display: none;
+    }
+
+    // links for the nav
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+    }
+}
