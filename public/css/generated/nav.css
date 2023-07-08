@@ -4,6 +4,7 @@ nav {
 }
 nav .logo-container {
   flex-grow: 1;
+  align-items: center;
 }
 nav .logo-container img {
   height: 30px;
@@ -15,4 +16,34 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 15px;
+}
+
+@media (max-width: 1000px) {
+  nav .mobile-container {
+    display: block;
+  }
+  nav ul {
+    font-size: 0.8em;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: var(--mobile-nav-bg);
+    box-shadow: var(--mobile-shadow);
+    gap: 10px;
+  }
+  nav ul a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  nav ul .secondary-button {
+    background-color: var(--mobile-nav-bg);
+    box-shadow: none;
+    padding: none;
+    height: 80px;
+    width: 100px;
+  }
 }/*# sourceMappingURL=nav.css.map */

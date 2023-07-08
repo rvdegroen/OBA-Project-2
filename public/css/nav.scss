@@ -5,6 +5,8 @@ nav {
     // logo container
     .logo-container {
         flex-grow: 1;
+        align-items: center;
+
         img {
             height: 30px;
         }
@@ -20,5 +22,45 @@ nav {
         display: flex;
         list-style: none;
         gap: 15px;
+    }
+}
+
+// tablet or mobile
+@media (max-width: 1000px) {
+    nav {
+        // mobile assistent container, visible and in the nav on mobile
+        .mobile-container {
+            display: block;
+        }
+
+        // only the button containers
+        ul {
+            font-size: 0.8em;
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            justify-content: space-around;
+            background-color: var(--mobile-nav-bg);
+            box-shadow: var(--mobile-shadow);
+            gap: 10px;
+
+            // to have the icons above the text
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            // classes of the anchor tags/list items with the secondary buttons
+            .secondary-button {
+                background-color: var(--mobile-nav-bg);
+                box-shadow: none;
+                padding: none;
+                height: 80px;
+                width: 100px;
+            }
+        }
     }
 }

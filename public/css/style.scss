@@ -1,5 +1,5 @@
-@import url('./nav.css');
 @import url('./buttons.css');
+@import url('./nav.css');
 
 // variable colors
 :root {
@@ -10,6 +10,8 @@
     // other
     --shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
     --radius: 5px;
+    --mobile-nav-bg: #ffffff;
+    --mobile-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
 
     // primary button
     --primary-bg: #3c389e;
@@ -36,6 +38,12 @@ body {
     scroll-behavior: smooth;
     background-color: var(--bg);
     font-family: 'Inter', sans-serif;
+}
+
+.animation {
+    img {
+        width: 100px;
+    }
 }
 
 // to remove/add elements
