@@ -5,6 +5,12 @@ export function renderResults(results) {
     // Clear previous results
     resultsDiv.innerHTML = '';
 
+    // when searching remove original h1 and add in a new h1 to the indexBody after the nav
+    const indexH1 = document.querySelector('.index-h1');
+    const inputValue = document.getElementById('query').value;
+
+    indexH1.textContent = `Je hebt gezocht op: "${inputValue}"`;
+
     const resultsGroupedByFormat = {};
 
     console.log(results);
@@ -25,9 +31,8 @@ export function renderResults(results) {
 
     // check if there are no results
     if (results.length === 0) {
-        const noResultsMessage = document.createElement('h1');
-        noResultsMessage.textContent = 'Geen resultaten gevonden.';
-        resultsDiv.appendChild(noResultsMessage);
+        indexH1.textContent = `Geen resultaten voor "${inputValue}"`;
+
         return;
     }
 
@@ -66,15 +71,18 @@ export function renderResults(results) {
 
             // if there's an coverimages available, then show and put the source, otherwise don't
             // this is only for courses, since the output is different than for books
-            if (searchResult.coverimages[0]) {
+            if (
+                Array.isArray(searchResult.coverimages) &&
+                searchResult.coverimages.length > 0
+            ) {
                 image.src = searchResult.coverimages[0];
             }
 
             // if there's an coverimages available and there's more than 0, then show and put the source, otherwise don't
             // this is for books and cd's for example
             if (
-                searchResult.coverimages[1] &&
-                searchResult.coverimages.length > 0
+                Array.isArray(searchResult.coverimages) &&
+                searchResult.coverimages.length > 1
             ) {
                 image.src = searchResult.coverimages[1];
             }
