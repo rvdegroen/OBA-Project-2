@@ -18,9 +18,11 @@ export function renderResults(results) {
         }
     }
 
+    // for every different format (book, cd)
     for (let entry of Object.entries(resultsGroupedByFormat)) {
         const [format, resultsByFormat] = entry;
 
+        // add an h2 with the format
         const heading = document.createElement('h2');
         heading.textContent = format;
         heading.classList.add('format-heading'); // TODO
@@ -29,7 +31,9 @@ export function renderResults(results) {
 
         const resultContainer = document.createElement('div');
 
+        // for every results within the resultByFormat
         for (let searchResult of resultsByFormat) {
+            // add the items underneath the heading
             // creating js elements
             const image = document.createElement('img');
             const container = document.createElement('a');
