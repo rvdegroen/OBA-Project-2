@@ -1,0 +1,28 @@
+.chatbar {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+}
+.chatbar div {
+  display: flex;
+}
+.chatbar div input {
+  font-size: 1em;
+  border-radius: 40px 0 0 40px;
+  border: none;
+  box-shadow: var(--shadow);
+  padding: 10px 20px;
+  width: 30em;
+}
+.chatbar div button {
+  font-size: 1em;
+  border-radius: 0 40px 40px 0;
+  border: none;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: 600;
+}/*# sourceMappingURL=chatbar.css.map */

@@ -1,5 +1,9 @@
 @import url("./buttons.css");
 @import url("./nav.css");
+@import url("./chatbar.css");
+@import url("./results.css");
+@import url("./assistent.css");
+@import url("./details.css");
 :root {
   --bg: #f9f9f9;
   --headings: #3c389e;
