@@ -53,6 +53,10 @@ nav {
                 justify-content: center;
             }
 
+            img {
+                height: 25px;
+            }
+
             // classes of the anchor tags/list items with the secondary buttons
             .secondary-button {
                 background-color: var(--mobile-nav-bg);
@@ -60,6 +64,13 @@ nav {
                 padding: none;
                 height: 80px;
                 width: 100px;
+
+                &:active,
+                &:hover {
+                    filter: hue-rotate(280deg) contrast(1.5);
+                    background-color: transparent;
+                    color: var(--mobile-hover-text);
+                }
             }
         }
     }

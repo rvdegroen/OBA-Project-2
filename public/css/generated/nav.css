@@ -39,11 +39,19 @@ nav ul {
     flex-direction: column;
     justify-content: center;
   }
+  nav ul img {
+    height: 25px;
+  }
   nav ul .secondary-button {
     background-color: var(--mobile-nav-bg);
     box-shadow: none;
     padding: none;
     height: 80px;
     width: 100px;
+  }
+  nav ul .secondary-button:active, nav ul .secondary-button:hover {
+    filter: hue-rotate(280deg) contrast(1.5);
+    background-color: transparent;
+    color: var(--mobile-hover-text);
   }
 }/*# sourceMappingURL=nav.css.map */

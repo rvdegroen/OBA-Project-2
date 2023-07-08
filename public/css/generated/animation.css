@@ -1,0 +1,11 @@
+@keyframes jump {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+.jumping {
+  animation: 0.4s jump ease infinite alternate;
+}/*# sourceMappingURL=animation.css.map */

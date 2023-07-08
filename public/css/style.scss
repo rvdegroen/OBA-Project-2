@@ -4,6 +4,7 @@
 @import url('./results.css');
 @import url('./assistent.css');
 @import url('./details.css');
+@import url('./animation.css');
 
 // variable colors
 :root {
@@ -16,6 +17,7 @@
     --radius: 5px;
     --mobile-nav-bg: #ffffff;
     --mobile-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
+    --mobile-hover-text: #fe3080;
 
     // primary button
     --primary-bg: #3c389e;
@@ -42,18 +44,6 @@ body {
     scroll-behavior: smooth;
     background-color: var(--bg);
     font-family: 'Inter', sans-serif;
-}
-
-.animation {
-    img {
-        width: 100px;
-    }
-}
-
-// for accesibility only hide the element, but not remove it
-.index-h1 {
-    position: absolute;
-    visibility: hidden;
 }
 
 // to remove/add elements
