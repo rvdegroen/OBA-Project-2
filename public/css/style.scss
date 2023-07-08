@@ -50,6 +50,12 @@ body {
     }
 }
 
+// for accesibility only hide the element, but not remove it
+.index-h1 {
+    position: absolute;
+    visibility: hidden;
+}
+
 // to remove/add elements
 .hidden {
     display: none;
