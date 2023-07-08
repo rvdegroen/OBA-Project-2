@@ -1,0 +1,36 @@
+// chatbar styling html: div > div > input - datalist - button
+
+// background of the chatbar
+.chatbar {
+    // background-color: red;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+
+    // parent container of input and button
+    div {
+        display: flex;
+
+        input {
+            font-size: 1em;
+            border-radius: 40px 0 0 40px;
+            border: none;
+            box-shadow: var(--shadow);
+            padding: 10px 20px;
+            width: 30em;
+        }
+
+        button {
+            font-size: 1em;
+            border-radius: 0 40px 40px 0;
+            border: none;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+    }
+}
