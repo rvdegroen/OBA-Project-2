@@ -24,7 +24,7 @@ export function renderResults(results) {
     }
 
     // check if there are no results
-    if (Object.keys(resultsGroupedByFormat).length === 0) {
+    if (results.length === 0) {
         const noResultsMessage = document.createElement('h1');
         noResultsMessage.textContent = 'Geen resultaten gevonden.';
         resultsDiv.appendChild(noResultsMessage);
