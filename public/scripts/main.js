@@ -5,6 +5,17 @@ const searchButton = document.getElementById('searchButton');
 const dialogButton = document.getElementById('dialog-button');
 const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
+// chat button
+const input = document.getElementById('query');
+
+if (input) {
+    input.addEventListener('focus', () => {
+        const jumpingDiv = document.querySelector('.jumping');
+        if (jumpingDiv) {
+            jumpingDiv.classList.remove('jumping');
+        }
+    });
+}
 
 if (searchButton) {
     searchButton.addEventListener('click', async () => {
