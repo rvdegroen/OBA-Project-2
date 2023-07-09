@@ -1,0 +1,48 @@
+#parent_results {
+    display: flex;
+    justify-content: center;
+
+    #results {
+        display: flex;
+        flex-direction: column;
+        // h2 with the class format-heading, div
+        .format-heading {
+            color: var(--headings);
+        }
+
+        // div with the actual results
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            a {
+                text-decoration: none;
+                // anchor elements with a div of the class resultContainer, containing imageContainer and detailContainer
+                .resultContainer {
+                    display: flex;
+                    flex-direction: column;
+                    width: 130px;
+
+                    img {
+                        width: 130px;
+                    }
+
+                    // image of the item/book
+
+                    // title and author
+                    .detailContainer {
+                        display: flex;
+                        flex-direction: column;
+
+                        h3,
+                        p {
+                            width: 130px;
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

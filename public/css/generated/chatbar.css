@@ -8,6 +8,11 @@
 }
 .chatbar div {
   display: flex;
+  border: 2px solid transparent;
+}
+.chatbar div:hover {
+  border: 2px solid var(--headings);
+  border-radius: 50px;
 }
 .chatbar div input {
   font-size: 1em;

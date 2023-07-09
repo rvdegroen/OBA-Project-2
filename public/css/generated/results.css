@@ -1,1 +1,36 @@
-/*# sourceMappingURL=results.css.map */
+#parent_results {
+  display: flex;
+  justify-content: center;
+}
+#parent_results #results {
+  display: flex;
+  flex-direction: column;
+}
+#parent_results #results .format-heading {
+  color: var(--headings);
+}
+#parent_results #results div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#parent_results #results div a {
+  text-decoration: none;
+}
+#parent_results #results div a .resultContainer {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+#parent_results #results div a .resultContainer img {
+  width: 130px;
+}
+#parent_results #results div a .resultContainer .detailContainer {
+  display: flex;
+  flex-direction: column;
+}
+#parent_results #results div a .resultContainer .detailContainer h3,
+#parent_results #results div a .resultContainer .detailContainer p {
+  width: 130px;
+  word-wrap: break-word;
+}/*# sourceMappingURL=results.css.map */

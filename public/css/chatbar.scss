@@ -13,6 +13,12 @@
     // parent container of input and button
     div {
         display: flex;
+        border: 2px solid transparent;
+
+        &:hover {
+            border: 2px solid var(--headings);
+            border-radius: 50px;
+        }
 
         input {
             font-size: 1em;

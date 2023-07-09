@@ -62,6 +62,7 @@ export function renderResults(results) {
             const titleHeading = document.createElement('h3'); // Separate heading for book title
             const authorParagraph = document.createElement('p'); // Separate paragraph for author
             const detailDiv = document.createElement('div');
+            const itemList = document.createElement('div');
 
             const bookTitle = shortenTitle(searchResult.titles[0]);
             const authors = shortenAuthor(searchResult.authors);
