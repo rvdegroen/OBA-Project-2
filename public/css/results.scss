@@ -1,6 +1,8 @@
 #parent_results {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 80em;
+    padding-bottom: 14em;
 
     #results {
         display: flex;
