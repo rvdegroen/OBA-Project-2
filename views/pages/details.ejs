@@ -41,9 +41,10 @@
                 </button>
 
                 <div class="detail-pagina_img-and-buttons">
+                    <!-- if coverimages is an array, then use the last image, otherwise use the fallback image -->
                     <img
                         class="detail-pagina_image_cover"
-                        src="<%= record.coverimages[1] %>"
+                        src="<%= Array.isArray(record.coverimages) ? record.coverimages[record.coverimages.length - 1] : '/images/fallback/thumbnail.png' %>"
                     />
                     <div class="detail-pagina_image_icons">
                         <button>
