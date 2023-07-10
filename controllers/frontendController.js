@@ -11,16 +11,19 @@ exports.favorite = function (req, res) {
 exports.details = async function (req, res) {
     const id = req.params.id;
 
+    console.log(id);
+
     // /details/3453456
     // make sure there's an id
     if (!id) {
         return res.status(400).send('No id provided');
     }
 
-    // gets data from obaService in function getDetails
-    const record = await obaService.getDetails(id);
+    try {
+        // gets data from obaService in function getDetails
+        const record = await obaService.getDetails(id);
+        console.log('id', id);
 
-    console.log('Rendering record', record);
-
-    res.render('pages/details', { record });
+        res.render('pages/details', { record });
+    } catch (error) {}
 };
