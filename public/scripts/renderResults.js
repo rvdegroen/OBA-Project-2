@@ -61,7 +61,6 @@ export function renderResults(results) {
             const titleHeading = document.createElement('h3'); // Separate heading for book title
             const authorParagraph = document.createElement('p'); // Separate paragraph for author
             const detailDiv = document.createElement('div');
-            const itemList = document.createElement('div');
 
             const bookTitle = shortenTitle(searchResult.titles[0]);
             const authors = shortenAuthor(searchResult.authors);
@@ -86,11 +85,18 @@ export function renderResults(results) {
             ) {
                 image.src = searchResult.coverimages[1];
             } else {
-                // sometimes, the thumbnail.png still doesn't load with the above code
-                // fix: if there's still an error, then change the src to thumbnail.png
+                // sometimes an image still doesn't wants to load, then return a thumbnail image
                 image.onerror = function () {
                     image.src = './images/fallback/thumbnail.png';
                 };
+            }
+
+            // some images start with only a ~, then the oba website needs to be added.
+            if (
+                Array.isArray(searchResult.coverimages) &&
+                searchResult.coverimages[0].startsWith('~')
+            ) {
+                image.src = `https://zoeken.oba.nl/${searchResult.coverimages[0]}`;
             }
 
             // appends
