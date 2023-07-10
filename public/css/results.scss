@@ -1,15 +1,17 @@
 #parent_results {
     margin: 0 auto;
-    width: 100vw;
-    max-width: 80em;
     padding-bottom: 14em;
 
     #results {
         display: flex;
         flex-direction: column;
+        max-width: 60em;
+        margin: 0 auto;
+
         // h2 with the class format-heading, div
         .format-heading {
             color: var(--headings);
+            margin: 20px 0 10px 10px;
         }
 
         // div with the actual results
@@ -20,6 +22,7 @@
 
             a {
                 text-decoration: none;
+                margin: 5px 10px;
                 // anchor elements with a div of the class resultContainer, containing imageContainer and detailContainer
                 .resultContainer {
                     display: flex;
