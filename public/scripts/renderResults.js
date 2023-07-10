@@ -85,6 +85,12 @@ export function renderResults(results) {
                 searchResult.coverimages.length > 1
             ) {
                 image.src = searchResult.coverimages[1];
+            } else {
+                // sometimes, the thumbnail.png still doesn't load with the above code
+                // fix: if there's still an error, then change the src to thumbnail.png
+                image.onerror = function () {
+                    image.src = './images/fallback/thumbnail.png';
+                };
             }
 
             // appends
