@@ -20,6 +20,11 @@
 #parent_results #results div a {
   text-decoration: none;
   margin: 5px 10px;
+  transform: 0.2s ease-in-out;
+}
+#parent_results #results div a:hover {
+  transform: translateY(-5px);
+  transform: 0.2s ease-in-out;
 }
 #parent_results #results div a .resultContainer {
   display: flex;
@@ -27,6 +32,7 @@
   width: 130px;
 }
 #parent_results #results div a .resultContainer img {
+  box-shadow: var(--shadow);
   width: 130px;
   height: 190px;
   -o-object-fit: cover;

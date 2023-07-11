@@ -27,6 +27,12 @@
             box-shadow: var(--shadow);
             padding: 10px 20px;
             width: 30em;
+
+            &:focus {
+                outline: none;
+                border: 2px solid var(--headings);
+                border-radius: 40px 0 0 40px;
+            }
         }
 
         button {

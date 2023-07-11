@@ -23,13 +23,21 @@
             a {
                 text-decoration: none;
                 margin: 5px 10px;
+                transform: 0.2s ease-in-out;
                 // anchor elements with a div of the class resultContainer, containing imageContainer and detailContainer
+
+                &:hover {
+                    transform: translateY(-5px);
+                    transform: 0.2s ease-in-out;
+                }
+
                 .resultContainer {
                     display: flex;
                     flex-direction: column;
                     width: 130px;
 
                     img {
+                        box-shadow: var(--shadow);
                         width: 130px;
                         height: 190px;
                         object-fit: cover;
