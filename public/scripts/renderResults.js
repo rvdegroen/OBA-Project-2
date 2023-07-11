@@ -132,15 +132,7 @@ function shortenTitle(title) {
 function shortenAuthor(authors) {
     // if there is no auteur then put unknown auteur
     if (!authors) {
-        return 'Onbekende auteur';
-    }
-
-    const authorNames =
-        typeof authors === 'string' ? authors.split(', ') : authors;
-
-    if (authorNames.length > 1) {
-        const shortenAuthors = authorNames.slice(0, 1).join(', ');
-        return shortenAuthors + '...';
+        return '';
     }
 
     return authors;
