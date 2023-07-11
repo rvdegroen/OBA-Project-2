@@ -6,32 +6,52 @@ const searchButton = document.getElementById('searchButton');
 const dialogButton = document.getElementById('dialog-button');
 const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
+const input = document.getElementById('query');
 
-if (searchButton) {
-    searchButton.addEventListener('click', async () => {
-        const input = document.getElementById('query');
-
-        const response = await fetch('/api/search', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                query: input.value,
-            }),
-        });
-
-        if (response.ok) {
-            const responseData = await response.json();
-            // go through the responseData array, look at the formats
-            // create a new object where the results are grouped by format
-            // and then adjust renderResults to use this
-            renderResults(responseData);
-        } else {
-            const errorMessage = await response.text();
-            console.error(errorMessage);
-        }
+// fetch function
+const search = async () => {
+    const response = await fetch('/api/search', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            query: input.value,
+        }),
     });
+
+    if (response.ok) {
+        const responseData = await response.json();
+        // go through the responseData array, look at the formats
+        // create a new object where the results are grouped by format
+        // and then adjust renderResults to use this
+        renderResults(responseData);
+    } else {
+        const errorMessage = await response.text();
+        console.error(errorMessage);
+    }
+};
+
+// handling the search function with await
+const handleSearch = async () => {
+    await search();
+};
+
+// press enter if you want to search
+const searchOnEnter = async (event) => {
+    if (event.key === 'Enter') {
+        await search();
+    }
+};
+
+// if there's a search button, search on click
+if (searchButton) {
+    searchButton.addEventListener('click', handleSearch);
+}
+
+// if there's an input, then run searchOnEnter, that fetches the data when you press on enter
+if (input) {
+    input.addEventListener('keydown', searchOnEnter);
 }
 
 // dialog src: https://www.youtube.com/watch?v=ywtkJkxJsdg&t=3s
