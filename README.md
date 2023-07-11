@@ -63,14 +63,16 @@ In dit project hebben wij de volgende features toegepast:
 Voor de herkansing heb ik de volgende features aangepast of toegepast:
 
 -   [] De gebruiker kan nu ook op `enter` drukken om te zoeken
--   [] De gebruiker kan op `esc` drukken, door uit het dialog te gaan
+-   [x] De gebruiker kan op `esc` drukken, door uit het dialog te gaan
+-   [x] De gebruiker kan buiten de dialog/modal klikken om deze te laten verdwijnen
 
 -   [] De gebruiker kan zoeken door op de meestgestelde vragen te klikken
 -   [] De applicatie is volledig responsive (ook de dialog): de hele css is opnieuw gedaan
 
 -   [] Verbeterde animatie & tekst van de virtual assistent
--   [] Bij geen resultaten, is er een empty state
+-   [] Bij geen resultaten, is er een empty state zichtbaar (tekst en een aanwijzing voor de gebruiker wat ze kunnen doen)
 -   [] De virtual assistent helpt de gebruiker bij een empty state (zegt iets)
+-   [x] Er zijn geen enkele bugs meer voor de afbeeldingen
 
 -   [] De "like" functie werkt
 -   [] De "share" functie werkt
