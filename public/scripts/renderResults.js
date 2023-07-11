@@ -62,8 +62,8 @@ export function renderResults(results) {
             const authorParagraph = document.createElement('p'); // Separate paragraph for author
             const detailDiv = document.createElement('div');
 
-            const bookTitle = shortenTitle(searchResult.titles[0]);
-            const authors = shortenAuthor(searchResult.authors);
+            const bookTitle = searchResult.titles[0];
+            const authors = unkownAuthor(searchResult.authors);
 
             // rendering
             container.setAttribute('href', `/details/${searchResult.id}`); // go to /details/${object.id}
@@ -123,17 +123,11 @@ export function renderResults(results) {
     }
 }
 
-// Function to shorten the title
-function shortenTitle(title) {
-    return title;
-}
-
-// Function to shorten the author's name
-function shortenAuthor(authors) {
+// Function to replace authors name with nothing (courses don't have authors, so it's more suitable)
+function unkownAuthor(authors) {
     // if there is no auteur then put unknown auteur
     if (!authors) {
         return '';
     }
-
     return authors;
 }
