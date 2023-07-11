@@ -8,8 +8,6 @@ const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 const input = document.getElementById('query');
 
-input.value = '';
-
 // fetch function
 const search = async () => {
     const response = await fetch('/api/search', {
