@@ -62,7 +62,7 @@ In dit project hebben wij de volgende features toegepast:
 
 Voor de herkansing heb ik de volgende features aangepast of toegepast:
 
--   [] De gebruiker kan nu ook op `enter` drukken om te zoeken
+-   [x] De gebruiker kan nu ook op `enter` drukken om te zoeken
 -   [x] De gebruiker kan op `esc` drukken, door uit het dialog te gaan
 -   [x] De gebruiker kan buiten de dialog/modal klikken om deze te laten verdwijnen
 
