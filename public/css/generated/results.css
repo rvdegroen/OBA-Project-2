@@ -33,6 +33,7 @@
      object-fit: cover;
 }
 #parent_results #results div a .resultContainer .detailContainer {
+  padding: 5px 0 10px 0;
   display: flex;
   flex-direction: column;
 }
@@ -42,6 +43,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+#parent_results #results div a .resultContainer .detailContainer p {
+  color: var(--secondary-text);
+}
+#parent_results #results div a .resultContainer .detailContainer h3 {
+  color: var(--headings);
 }
 @supports (-webkit-line-clamp: 2) {
   #parent_results #results div a .resultContainer .detailContainer h3 {
