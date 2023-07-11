@@ -8,6 +8,8 @@ const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 const input = document.getElementById('query');
 
+input.value = '';
+
 // fetch function
 const search = async () => {
     const response = await fetch('/api/search', {
@@ -30,6 +32,7 @@ const search = async () => {
         const errorMessage = await response.text();
         console.error(errorMessage);
     }
+    input.value = '';
 };
 
 // handling the search function with await
