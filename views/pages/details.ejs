@@ -7,7 +7,7 @@
 
     <body>
         <%- include("../partials/nav");%>
-        <h1 class="oba-title">OBA Catalogus</h1>
+        <h1 class="detail-title"><%= record.titles[0] %></h1>
 
         <!-- animation image -->
         <div class="animation">
@@ -23,7 +23,7 @@
                     &lt; Terug
                 </button>
 
-                <div>
+                <div class="left-image-buttons">
                     <!-- if coverimages is an array, then use the last image, otherwise use the fallback image -->
 
                     <img
@@ -44,8 +44,6 @@
             </div>
 
             <div class="right-cover">
-                <h2><%= record.titles[0] %></h2>
-
                 <% if (Array.isArray(record.summaries) &&
                 record.summaries.length > 0) { %>
                 <section>
