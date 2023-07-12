@@ -20,6 +20,13 @@
     max-width: 50em;
 }
 
+// cursor animation on input
+.lottie-input-cursor {
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-10px);
+}
+
 @media (max-width: 1000px) {
     .lottie-library {
         width: 90vw !important;
