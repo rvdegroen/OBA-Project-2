@@ -6,6 +6,7 @@
 @import url('./details.css');
 @import url('./animation.css');
 @import url('./headings.css');
+@import url('./assistent.css');
 
 // variable colors
 :root {
@@ -58,7 +59,7 @@ body {
 }
 
 // mobile
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     // hide desktop stuff on mobile
     .desktop {
         display: none;
@@ -67,5 +68,10 @@ body {
     // show mobile stuff on mobile
     .mobile {
         display: block !important;
+    }
+
+    // to remove/add elements
+    .hidden {
+        display: none !important;
     }
 }

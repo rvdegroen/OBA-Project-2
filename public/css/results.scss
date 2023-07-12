@@ -2,7 +2,8 @@
     margin: 0 auto;
     padding-bottom: 14em;
 
-    #results {
+    #results,
+    .favorites {
         display: flex;
         flex-direction: column;
         max-width: 60em;

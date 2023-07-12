@@ -6,6 +6,7 @@
 @import url("./details.css");
 @import url("./animation.css");
 @import url("./headings.css");
+@import url("./assistent.css");
 :root {
   --bg: #f9f9f9;
   --headings: #3c389e;
@@ -43,11 +44,14 @@ body {
   display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .desktop {
     display: none;
   }
   .mobile {
     display: block !important;
+  }
+  .hidden {
+    display: none !important;
   }
 }/*# sourceMappingURL=style.css.map */

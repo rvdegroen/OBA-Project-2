@@ -2,64 +2,77 @@
   margin: 0 auto;
   padding-bottom: 14em;
 }
-#parent_results #results {
+#parent_results #results,
+#parent_results .favorites {
   display: flex;
   flex-direction: column;
   max-width: 60em;
   margin: 0 auto;
 }
-#parent_results #results .format-heading {
+#parent_results #results .format-heading,
+#parent_results .favorites .format-heading {
   color: var(--headings);
   margin: 20px 0 10px 10px;
 }
-#parent_results #results div {
+#parent_results #results div,
+#parent_results .favorites div {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-#parent_results #results div a {
+#parent_results #results div a,
+#parent_results .favorites div a {
   text-decoration: none;
   margin: 5px 10px;
   transition: 0.2s ease-in-out;
 }
-#parent_results #results div a:hover {
+#parent_results #results div a:hover,
+#parent_results .favorites div a:hover {
   transform: translateY(-5px);
   transition: 0.2s ease-in-out;
   filter: brightness(1.3);
 }
-#parent_results #results div a .resultContainer {
+#parent_results #results div a .resultContainer,
+#parent_results .favorites div a .resultContainer {
   display: flex;
   flex-direction: column;
   width: 130px;
 }
-#parent_results #results div a .resultContainer img {
+#parent_results #results div a .resultContainer img,
+#parent_results .favorites div a .resultContainer img {
   box-shadow: var(--shadow);
   width: 130px;
   height: 190px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#parent_results #results div a .resultContainer .detailContainer {
+#parent_results #results div a .resultContainer .detailContainer,
+#parent_results .favorites div a .resultContainer .detailContainer {
   padding: 5px 0 10px 0;
   display: flex;
   flex-direction: column;
 }
 #parent_results #results div a .resultContainer .detailContainer h3,
-#parent_results #results div a .resultContainer .detailContainer p {
+#parent_results #results div a .resultContainer .detailContainer p,
+#parent_results .favorites div a .resultContainer .detailContainer h3,
+#parent_results .favorites div a .resultContainer .detailContainer p {
   width: 130px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
 }
-#parent_results #results div a .resultContainer .detailContainer p {
+#parent_results #results div a .resultContainer .detailContainer p,
+#parent_results .favorites div a .resultContainer .detailContainer p {
   color: var(--secondary-text);
 }
-#parent_results #results div a .resultContainer .detailContainer h3 {
+#parent_results #results div a .resultContainer .detailContainer h3,
+#parent_results .favorites div a .resultContainer .detailContainer h3 {
   color: var(--headings);
 }
 @supports (-webkit-line-clamp: 2) {
-  #parent_results #results div a .resultContainer .detailContainer h3 {
+  #parent_results #results div a .resultContainer .detailContainer h3,
+  #parent_results .favorites div a .resultContainer .detailContainer h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
