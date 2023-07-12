@@ -20,7 +20,8 @@
   border: none;
   box-shadow: var(--shadow);
   padding: 10px 20px;
-  width: 30em;
+  width: 70vw;
+  max-width: 35em;
 }
 .chatbar div input:focus {
   outline: none;

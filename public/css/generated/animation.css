@@ -8,4 +8,23 @@
 }
 .jumping {
   animation: 0.4s jump ease infinite alternate;
+}
+
+.mobile-text-container {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .mobile-text-container {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    background: #fd2f7f;
+    max-width: 90%;
+    align-self: center;
+    margin: 0 10px;
+    width: -moz-max-content;
+    width: max-content;
+    border-radius: 20px 0 20px 20px;
+  }
 }/*# sourceMappingURL=animation.css.map */
