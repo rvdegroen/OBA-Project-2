@@ -50,6 +50,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-word;
 }
 #parent_results #results div a .resultContainer .detailContainer p {
   color: var(--secondary-text);

@@ -10,4 +10,21 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: center;
+
+    // white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    max-width: 30em;
+    // padding: 0 10px 0 10px;
+    margin: 0 auto;
+
+    @supports (-webkit-line-clamp: 2) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
 }
