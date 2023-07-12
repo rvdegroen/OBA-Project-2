@@ -7,7 +7,7 @@
 
     <body class="indexBody">
         <%- include("../partials/nav");%>
-        <h1 class="index-h1">Wat zoek je in de bieb?</h1>
+        <h1 class="index-h1">Zoek in de Bieb van Amsterdam</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
         <!-- animation image -->
@@ -26,19 +26,6 @@
             speed="1"
             class="lottie-library"
             style="width: 50em; height: auto"
-            loop
-            autoplay
-            direction="1"
-            mode="normal"
-        ></lottie-player>
-
-        <!-- hand animtion: mobile -->
-        <lottie-player
-            class="mobile lottie-input-hand"
-            src="/animations/clickhand.json"
-            background="transparent"
-            speed="1"
-            style="width: 100px; height: auto"
             loop
             autoplay
             direction="1"
@@ -67,6 +54,19 @@
                 mode="normal"
             ></lottie-player>
 
+            <!-- hand animtion: mobile -->
+            <lottie-player
+                class="mobile lottie-input-hand"
+                src="/animations/clickhand.json"
+                background="transparent"
+                speed="1"
+                style="width: 100px; height: auto"
+                loop
+                autoplay
+                direction="1"
+                mode="normal"
+            ></lottie-player>
+
             <div class="jumping">
                 <input
                     list="faq"
@@ -77,12 +77,13 @@
                     autocomplete="off"
                 />
 
+                <!-- most requently looked for tags -->
                 <datalist id="faq">
-                    <option value="Chocolate"></option>
-                    <option value="Coconut"></option>
-                    <option value="Mint"></option>
-                    <option value="Strawberry"></option>
-                    <option value="Vanilla"></option>
+                    <option value="Kinderboeken"></option>
+                    <option value="Dieren"></option>
+                    <option value="Cursus"></option>
+                    <option value="Kunst"></option>
+                    <option value="Vincent van Gogh"></option>
                 </datalist>
 
                 <button type="submit" id="searchButton" class="primary-button">
