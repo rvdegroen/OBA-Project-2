@@ -28,3 +28,9 @@ h1 {
         -webkit-box-orient: vertical;
     }
 }
+
+@media (max-width: 1000px) {
+    h1 {
+        padding-top: 0;
+    }
+}

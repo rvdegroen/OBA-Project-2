@@ -25,4 +25,10 @@ h1 {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    padding-top: 0;
+  }
 }/*# sourceMappingURL=headings.css.map */
