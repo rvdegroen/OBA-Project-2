@@ -3,6 +3,55 @@
     <head>
         <%- include("../partials/head");%>
         <title>OBA Catalogus</title>
+        <script>
+            function addToFavorites() {
+                // turn record into string from back-end to front-end and make it into an object (json.parse)
+                // happens in front-end
+                const parsedRecord = JSON.parse(
+                    // happens in back-end because of the percent thingy
+                    // using - because with =, it would escape/different format special characters
+                    `<%- JSON.stringify(record) %>`
+                );
+                // gets string out of localStorage
+                const oldFavorites = localStorage.getItem('favorites');
+
+                // if there was something in localstorage (you can only have strings in localstorage)
+                // oldfavorites is an array of objects thats a string
+                if (oldFavorites) {
+                    // json.parse turns it back into an array from localstorage
+                    const oldFavoritesParsed = JSON.parse(oldFavorites);
+                    // take all the old favorites, except the one you're on right now which is parsedRecord (current item on the page)
+                    // otherwise its twice in there
+                    const favoritesWithoutRecord = oldFavoritesParsed.filter(
+                        (favorite) => favorite.id !== parsedRecord.id
+                    );
+
+                    // make new array
+                    const newFavorites = [
+                        // with favorites from before (localstorage) and the parsedRecord (the one you're favoriting right now), make new arrat
+                        ...favoritesWithoutRecord,
+                        parsedRecord,
+                    ];
+
+                    // turn new array into string and save it into localsotrage in the key "favorites"
+                    localStorage.setItem(
+                        'favorites',
+                        JSON.stringify(newFavorites)
+                    );
+                } else {
+                    // if there's no localstorage:
+                    // make new array
+                    const newFavorites = [parsedRecord];
+                    // puts it into localStorage
+                    localStorage.setItem(
+                        // in the key 'favorites'
+                        'favorites',
+                        // only strings go into localstorage
+                        JSON.stringify(newFavorites)
+                    );
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -30,7 +79,8 @@
                         src="<%= Array.isArray(record.coverimages) ? record.coverimages[record.coverimages.length - 1] : '/images/fallback/thumbnail.png' %>"
                     />
                     <div class="action-buttons">
-                        <button>
+                        <!-- add to favourites -->
+                        <button onclick="addToFavorites()">
                             Favoriet
                             <div class="heart-icon"></div>
                         </button>

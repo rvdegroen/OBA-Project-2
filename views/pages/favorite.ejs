@@ -10,340 +10,51 @@
         <h1 class="favorite-heading">Favorieten</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
-        <div class="favorite-parent">
+        <div id="parent_results">
             <!-- id results for styling -->
-            <div class="favorites">
-                <h2 class="format-heading">Boeken</h2>
-                <div class="results-container">
-                    <a href="/details/|oba-catalogus|1187163"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/417144695&amp;token=c1322402"
-                                />
-                            </div>
-                            <div class="detail-div">
-                                <h3>Succes! : rekenen...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/details/|oba-catalogus|1225493"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/423637223&amp;token=c1322402"
-                                />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Het Hollandse Huis...</h3>
-                                <p>Ann Patchett...</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/details/|oba-catalogus|1085085">
-                        <div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/357754018&amp;token=c1322402"
-                                />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Harry Potter en...</h3>
-                                <p>J.K. Rowling...</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/details/|oba-catalogus|1085083">
-                        <div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/342946145&amp;token=c1322402"
-                                />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Harry Potter en...</h3>
-                                <p>J.K. Rowling...</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/details/|oba-catalogus|1085084">
-                        <div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/337828911&amp;token=c1322402"
-                                />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Harry Potter en...</h3>
-                                <p>J.K. Rowling...</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <h2 class="format-heading">Luisterboek</h2>
-                <div class="results-container">
-                    <a href="/details/|oba-catalogus|770073">
-                        <div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/304026948&amp;token=c1322402"
-                                />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Harry Potter en...</h3>
-                                <p>J.K. Rowling...</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <h2 class="format-heading">Dvd</h2>
-                <div class="results-container">
-                    <a href="/details/|oba-catalogus|38562">
-                        <div class="book-container">
-                            <div class="image-container">
-                                <img
-                                    src="https://v112.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/275913635&amp;token=c1322402"
-                                />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Harry Potter</h3>
-                                <p>Shaun Trevisick</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- <h2>Cursus</h2>
-                <div class="results-container">
-                    <a href="/details/|misc/vua-json|74682"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Turks Vergevorderden...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|73919"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Thriller...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74064"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Kinderverhalen...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|70354"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Indonesisch Beginners...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|70355"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Indonesisch Halfgevorderden...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74058"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Hedendaagse Afrikaanse...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74660"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Japans...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74535"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online Cursus Marokkaans...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74663"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Japans...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74425"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Koreaans...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74431"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Koreaans...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74426"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Koreaans...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74709"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online Cursus Latijn...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|74374"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Iedereen kan...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|69932"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Smartphone Fotografie...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|71876"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online cursus Zentangle...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|70994"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Mandarijn Chinees...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|70341"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online Cursus Indonesisch...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|70332"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Cursus Indonesisch Beginners...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    ><a href="/details/|misc/vua-json|70343"
-                        ><div class="book-container">
-                            <div class="image-container">
-                                <img src="undefined" />
-                            </div>
-                            <div></div>
-                            <div class="detail-div">
-                                <h3>Online Cursus Indonesisch...</h3>
-                                <p>Onbekende auteur</p>
-                            </div>
-                        </div></a
-                    > -->
-                </div>
+            <div id="results">
+                <div id="results-insert-html"></div>
             </div>
         </div>
+        <script>
+            const resultsContainer = document.getElementById(
+                'results-insert-html'
+            );
+            // get favorites from localStorage
+            const favorites = localStorage.getItem('favorites');
+
+            // if there are favorites
+            if (favorites) {
+                let html = '';
+                // turn favorites into an array
+                const parsedFavorites = JSON.parse(favorites);
+                // for every favorite that's parsed:
+                for (const favorite of parsedFavorites) {
+                    // for every item, add another string with the below html:
+                    html += `<div>
+  <a href="/details/${favorite.id}">
+    <div class="resultContainer">
+      <div class="imageContainer"><img
+        src="${
+            Array.isArray(favorite.coverimages)
+                ? favorite.coverimages[favorite.coverimages.length - 1]
+                : '/images/fallback/thumbnail.png'
+        }">
+      </div>
+      <div class="detailContainer">
+        <h3>${favorite.titles[0]}</h3>
+        <p>${
+            Array.isArray(favorite.authors) && favorite.authors.length > 0
+                ? favorite.authors.join(', ')
+                : ''
+        }</p>
+      </div>
+    </div>
+  </a>
+</div>`;
+                }
+                resultsContainer.innerHTML = html;
+            }
+        </script>
     </body>
 </html>
