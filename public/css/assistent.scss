@@ -9,8 +9,11 @@
     }
 }
 
+@media (max-width: 1150px) {
+}
+
 // mobile
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     // hide desktop animation on mobile
     .animation {
         display: none;
