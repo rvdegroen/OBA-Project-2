@@ -9,13 +9,17 @@
     }
 }
 
+// to draw user's attention animation
 .jumping {
     animation: 0.4s jump ease infinite alternate;
 }
 
+// don't show .mobile-text-container on desktop
 .mobile-text-container {
     display: none;
 }
+
+// lottie animation
 
 @media (max-width: 1000px) {
     // container that's only visible on mobile screen
