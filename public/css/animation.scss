@@ -15,16 +15,13 @@
 }
 
 // lottie animation
-#lottie-index {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-// cursor that clicks on the input
-.lottie-input-cursor {
+.lottie-library {
+    margin: 0 auto;
+    max-width: 50em;
 }
 
 @media (max-width: 1000px) {
+    .lottie-library {
+        width: 90vw !important;
+    }
 }

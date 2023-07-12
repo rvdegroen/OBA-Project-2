@@ -10,9 +10,13 @@
   animation: 0.4s jump ease infinite alternate;
 }
 
-#lottie-index {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.lottie-library {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+@media (max-width: 1000px) {
+  .lottie-library {
+    width: 90vw !important;
+  }
 }/*# sourceMappingURL=animation.css.map */

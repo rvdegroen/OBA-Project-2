@@ -7,7 +7,7 @@ const dialogButton = document.getElementById('dialog-button');
 const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 const input = document.getElementById('query');
-const lottieIndexAnimation = document.querySelector('#lottie-index');
+const lottieIndexAnimation = document.querySelector('.lottie-library');
 
 // fetch function
 const search = async () => {

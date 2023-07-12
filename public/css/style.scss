@@ -51,3 +51,21 @@ body {
 .hidden {
     display: none !important;
 }
+
+// hide mobile stuff on desktop
+.mobile {
+    display: none;
+}
+
+// mobile
+@media (max-width: 1000px) {
+    // hide desktop stuff on mobile
+    .desktop {
+        display: none;
+    }
+
+    // show mobile stuff on mobile
+    .mobile {
+        display: block !important;
+    }
+}
