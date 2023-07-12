@@ -17,6 +17,7 @@
   height: 285px;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: var(--shadow);
 }
 .detail-pagina .left-cover .secondary-button {
   flex-grow: 0;
