@@ -1,1 +1,43 @@
-/*# sourceMappingURL=details.css.map */
+.detail-pagina {
+  display: flex;
+  justify-content: center;
+  gap: 84px;
+  margin-top: 20px;
+  max-width: 40em;
+  margin: 20px auto 0 auto;
+}
+.detail-pagina .left-cover {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.detail-pagina .left-cover img {
+  width: 180px;
+  height: 285px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detail-pagina .left-cover .secondary-button {
+  flex-grow: 0;
+  width: -moz-max-content;
+  width: max-content;
+}
+.detail-pagina .left-cover .action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.detail-pagina .right-cover {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 58px;
+}
+.detail-pagina .right-cover h3 {
+  padding-bottom: 10px;
+}
+.detail-pagina .button-container {
+  display: flex;
+  gap: 20px;
+}/*# sourceMappingURL=details.css.map */

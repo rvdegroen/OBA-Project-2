@@ -12,6 +12,7 @@
   cursor: pointer;
   transition: ease-in-out 0.2s;
   border-radius: var(--radius);
+  border: none;
 }
 .secondary-button:hover {
   background-color: var(--hover-bg);
@@ -33,8 +34,31 @@
   cursor: pointer;
   transition: ease-in-out 0.2s;
   border-radius: var(--radius);
+  border: none;
 }
 .primary-button:hover {
+  background-color: var(--hover-bg);
+  color: var(--hover-text);
+  transition: ease-in-out 0.2s;
+}
+
+.secondary-button {
+  height: 45px;
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  border-radius: var(--radius);
+  border: none;
+}
+.secondary-button:hover {
   background-color: var(--hover-bg);
   color: var(--hover-text);
   transition: ease-in-out 0.2s;

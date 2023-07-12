@@ -8,75 +8,42 @@
     <body>
         <%- include("../partials/nav");%>
         <h1 class="oba-title">OBA Catalogus</h1>
-        <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
-        <div class="detail-arrow-container1" id="detail-arrow-container">
-            <div class="arrow-talk-with-a-worker" id="arrows"></div>
-        </div>
-
-        <div class="detail-arrow-container2" id="detail-arrow-container">
-            <div class="arrow-favorites" id="arrows"></div>
-        </div>
-
-        <div class="message-wrapper">
-            <ul id="message-list"></ul>
-            <div class="stick1"></div>
-        </div>
-
-        <div class="digital-assistant-container">
+        <!-- animation image -->
+        <div class="animation">
             <img
-                class="digital-assistant-detail"
-                src="/images/character/animation/frame3.png"
-                alt=""
+                src="/images/character/animation/frame1.png"
+                alt="circle for animation"
             />
         </div>
 
         <div class="detail-pagina">
-            <div class="detail-pagina_image">
-                <button
-                    class="secondary-button detail-pagina_back-button"
-                    onclick="history.back()"
-                >
+            <div class="left-cover">
+                <button class="secondary-button" onclick="history.back()">
                     &lt; Terug
                 </button>
 
-                <div class="detail-pagina_img-and-buttons">
+                <div>
                     <!-- if coverimages is an array, then use the last image, otherwise use the fallback image -->
+
                     <img
-                        class="detail-pagina_image_cover"
                         src="<%= Array.isArray(record.coverimages) ? record.coverimages[record.coverimages.length - 1] : '/images/fallback/thumbnail.png' %>"
                     />
-                    <div class="detail-pagina_image_icons">
+                    <div class="action-buttons">
                         <button>
-                            <div
-                                class="detail-arrow-container3"
-                                id="detail-arrow-container"
-                            >
-                                <div class="arrow-favorite" id="arrows"></div>
-                            </div>
-                            <span>Favoriet</span>
-                            <span
-                                ><img src="/images/icons/favorite.svg" alt=""
-                            /></span>
+                            Favoriet
+                            <div class="heart-icon"></div>
                         </button>
 
                         <button>
-                            <div
-                                class="detail-arrow-container4"
-                                id="detail-arrow-container"
-                            >
-                                <div class="arrow-share" id="arrows"></div>
-                            </div>
-                            <span>Delen</span>
-                            <span
-                                ><img src="/images/icons/share.svg" alt=""
-                            /></span>
+                            Delen
+                            <div class="share-icon"></div>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="detail-pagina_informatie">
+            <div class="right-cover">
                 <h2><%= record.titles[0] %></h2>
 
                 <% if (Array.isArray(record.summaries) &&
@@ -123,8 +90,9 @@
                 </section>
                 <% } %>
 
-                <div class="detail-pagina_informatie_buttons">
+                <div class="button-container">
                     <a
+                        class="secondary-button"
                         href="<%= record.detailLink %>"
                         class="secondary-button hi"
                         >OBA Website</a
