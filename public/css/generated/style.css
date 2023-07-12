@@ -7,6 +7,7 @@
 @import url("./animation.css");
 @import url("./headings.css");
 @import url("./assistent.css");
+@import url("./favorite.css");
 :root {
   --bg: #f9f9f9;
   --headings: #3c389e;

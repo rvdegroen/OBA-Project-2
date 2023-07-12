@@ -1,0 +1,10 @@
+.favorite-back {
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateX(10px);
+  margin-bottom: 20px;
+}
+
+.favorite-results {
+  margin-top: 20px !important;
+}/*# sourceMappingURL=favorite.css.map */

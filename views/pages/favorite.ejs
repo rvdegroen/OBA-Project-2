@@ -7,15 +7,22 @@
 
     <body>
         <%- include("../partials/nav");%>
-        <h1 class="favorite-heading">Favorieten</h1>
+        <h1 class="detail-title">Favorieten</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
         <div id="parent_results">
             <!-- id results for styling -->
-            <div id="results">
+            <div id="results" class="favorite-results">
+                <button
+                    class="secondary-button favorite-back"
+                    onclick="history.back()"
+                >
+                    &lt; Terug
+                </button>
                 <div id="results-insert-html"></div>
             </div>
         </div>
+        <!-- show favorite -->
         <script>
             const resultsContainer = document.getElementById(
                 'results-insert-html'
