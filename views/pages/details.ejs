@@ -80,14 +80,27 @@
                     />
                     <div class="action-buttons">
                         <!-- add to favourites -->
-                        <button onclick="addToFavorites()">
+                        <button
+                            onclick="addToFavorites()"
+                            class="favorite-button"
+                        >
                             Favoriet
-                            <div class="heart-icon"></div>
+                            <div class="heart-icon">
+                                <img
+                                    src="/images/icons/like-hover.svg"
+                                    alt=""
+                                />
+                            </div>
                         </button>
 
-                        <button>
+                        <button class="share-button">
                             Delen
-                            <div class="share-icon"></div>
+                            <div class="share-icon">
+                                <img
+                                    src="/images/icons/share-hover.svg"
+                                    alt=""
+                                />
+                            </div>
                         </button>
                     </div>
                 </div>
