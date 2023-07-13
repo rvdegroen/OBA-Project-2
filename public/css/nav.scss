@@ -78,6 +78,10 @@ nav {
 }
 
 @media (max-width: 550px) {
+    nav {
+        margin: 10px;
+    }
+
     // hide the oba logo on very small screens, otherwise there's not enough space for the virtual assistent's text
     .logo-container {
         display: none;

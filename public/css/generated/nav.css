@@ -58,6 +58,9 @@ nav ul {
   }
 }
 @media (max-width: 550px) {
+  nav {
+    margin: 10px;
+  }
   .logo-container {
     display: none;
   }
