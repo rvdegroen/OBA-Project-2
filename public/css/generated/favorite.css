@@ -7,4 +7,8 @@
 
 .favorite-results {
   margin-top: 20px !important;
+}
+
+#favorite-emptystate {
+  justify-content: center !important;
 }/*# sourceMappingURL=favorite.css.map */

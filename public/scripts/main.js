@@ -9,12 +9,26 @@ const closeButton = document.getElementById('close-button');
 const input = document.getElementById('query');
 const lottieIndexAnimation = document.querySelector('.lottie-library');
 const mobileTextForAssistent = document.querySelector('.mobile-text-p');
+const clearFavoriteButton = document.getElementById('clearFavoriteButton');
+const favoriteEmptyState = document.getElementById('favorite-emptystate');
+const insertedFavorites = document.getElementById('results-insert-html');
+
+if (favoriteEmptyState) {
+    clearFavoriteButton.classList.add('hidden');
+} else if (insertedFavorites) {
+    clearFavoriteButton.classList.remove('hidden');
+}
 
 // fetch function
 const search = async () => {
     // hide lottie when fetching
     lottieIndexAnimation.classList.add('hidden');
     let mobileAssistent = localStorage.getItem('mobileAssistent');
+
+    clearTimeout(window.timeout1);
+    clearTimeout(window.timeout2);
+    clearTimeout(window.timeout3);
+    clearTimeout(window.timeout4);
 
     // first time you start up the site
     if (!mobileAssistent) {

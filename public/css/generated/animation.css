@@ -10,7 +10,8 @@
   animation: 0.4s jump ease infinite alternate;
 }
 
-.lottie-library {
+.lottie-library,
+.lottie-empty {
   margin: 0 auto;
   max-width: 50em;
 }
