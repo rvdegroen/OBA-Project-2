@@ -23,6 +23,11 @@
   pointer-events: none;
 }
 
+.mobile-text {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 1150px) {
   .lottie-library {
     width: 90vw !important;
