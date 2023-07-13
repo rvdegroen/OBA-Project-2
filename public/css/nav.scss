@@ -36,15 +36,24 @@ nav {
 
         // mobile assistent container, visible and in the nav on mobile
         .mobile-container {
-            display: block;
+            display: flex;
         }
 
-        // text for virtual assistent (mobile only)
         .mobile-text {
-            background: var(--primary-bg);
-            color: white;
-            padding: 5px;
-            border-radius: 0px 10px 10px 10px;
+            // text for virtual assistent (mobile only)
+            .mobile-text-p {
+                background: var(--primary-bg);
+                color: white;
+                padding: 5px;
+                border-radius: 0px 10px 10px 10px;
+            }
+
+            button {
+                background: var(--primary-bg);
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+            }
         }
 
         // only the button containers
