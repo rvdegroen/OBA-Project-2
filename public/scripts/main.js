@@ -8,11 +8,41 @@ const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 const input = document.getElementById('query');
 const lottieIndexAnimation = document.querySelector('.lottie-library');
+const mobileTextForAssistent = document.querySelector('.mobile-text-p');
 
 // fetch function
 const search = async () => {
     // hide lottie when fetching
     lottieIndexAnimation.classList.add('hidden');
+    let mobileAssistent = localStorage.getItem('mobileAssistent');
+
+    // first time you start up the site
+    if (!mobileAssistent) {
+        mobileAssistent = true;
+        localStorage.setItem('mobileAssistent', mobileAssistent);
+
+        if (mobileTextForAssistent) {
+            setTimeout(() => {
+                mobileTextForAssistent.textContent =
+                    'Dit zijn de resultaten van je zoekopdracht.';
+
+                setTimeout(() => {
+                    mobileTextForAssistent.textContent =
+                        'Je kan op één van de resultaten klikken, dan krijg je meer informatie te zien.';
+                }, 4000); // first timeout
+            }, 3000); // 2nd timeout
+        }
+    }
+
+    // 2nd time you start up the site
+    if (mobileAssistent) {
+        if (mobileTextForAssistent) {
+            setTimeout(() => {
+                mobileTextForAssistent.textContent =
+                    'Dit zijn de resultaten van je zoekopdracht.';
+            }, 3000);
+        }
+    }
 
     const response = await fetch('/api/search', {
         method: 'POST',
