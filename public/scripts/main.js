@@ -36,11 +36,11 @@ const search = async () => {
         localStorage.setItem('mobileAssistent', mobileAssistent);
 
         if (mobileTextForAssistent) {
-            setTimeout(() => {
+            window.timeout5 = setTimeout(() => {
                 mobileTextForAssistent.textContent =
                     'Dit zijn de resultaten van je zoekopdracht.';
 
-                setTimeout(() => {
+                window.timeout6 = setTimeout(() => {
                     mobileTextForAssistent.textContent =
                         'Je kan op één van de resultaten klikken, dan krijg je meer informatie te zien.';
                 }, 4000); // first timeout
@@ -51,7 +51,7 @@ const search = async () => {
     // 2nd time you start up the site
     if (mobileAssistent) {
         if (mobileTextForAssistent) {
-            setTimeout(() => {
+            window.timeout7 = setTimeout(() => {
                 mobileTextForAssistent.textContent =
                     'Dit zijn de resultaten van je zoekopdracht.';
             }, 3000);
