@@ -2,7 +2,7 @@
   width: -moz-max-content;
   width: max-content;
   transform: translateX(10px);
-  margin-bottom: 20px;
+  margin: 0 10px 20px 0;
 }
 
 .favorite-results {

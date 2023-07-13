@@ -13,20 +13,35 @@
         <div id="parent_results">
             <!-- id results for styling -->
             <div id="results" class="favorite-results">
-                <button
-                    class="secondary-button favorite-back"
-                    onclick="history.back()"
-                >
-                    &lt; Terug
-                </button>
+                <div class="favorite-button-container">
+                    <button
+                        class="secondary-button favorite-back"
+                        onclick="history.back()"
+                    >
+                        &lt; Terug
+                    </button>
+                    <button
+                        class="secondary-button favorite-back"
+                        onclick="clearFavorites()"
+                    >
+                        Verwijder alle favorieten
+                    </button>
+                </div>
+
                 <div id="results-insert-html"></div>
             </div>
         </div>
         <!-- show favorite -->
         <script>
+            function clearFavorites() {
+                localStorage.removeItem('favorites');
+                location.reload();
+            }
+
             const resultsContainer = document.getElementById(
                 'results-insert-html'
             );
+
             // get favorites from localStorage
             const favorites = localStorage.getItem('favorites');
 
@@ -61,6 +76,8 @@
 </div>`;
                 }
                 resultsContainer.innerHTML = html;
+            } else {
+                resultsContainer.innerHTML = '<h2 class> geen favorieten </h2>';
             }
         </script>
     </body>
