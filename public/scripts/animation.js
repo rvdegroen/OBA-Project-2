@@ -30,31 +30,5 @@ if (mobileTextForAssistent) {
 }
 
 // check inactivity for mobile
-if (mobileTextForAssistent) {
-    let activityTimeout;
-
-    function handleTouchstart() {
-        clearTimeout(activityTimeout);
-
-        activityTimeout = setTimeout(function () {
-            const yesButton = document.createElement('button');
-
-            if (yesButton) {
-            }
-
-            if (!yesButton) {
-                mobileTextForAssistent.textContent = 'Ben je er nog?';
-                let yesButtonText = document.createTextNode('Ja');
-                yesButton.appendChild(yesButtonText);
-                mobileTextForAssistentContainer.appendChild(yesButton);
-
-                console.log('De gebruiker is 20 seconden inactief geweest.');
-            }
-        }, 5000);
-    }
-
-    document.addEventListener('touchstart', handleTouchstart);
-    document.addEventListener('mousemove', handleTouchstart);
-}
 
 export * from './animation.js';
