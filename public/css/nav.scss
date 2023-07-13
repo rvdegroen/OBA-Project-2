@@ -5,16 +5,10 @@ nav {
     // logo container
     .logo-container {
         align-items: center;
-        flex-grow: 1;
 
         img {
             height: 30px;
         }
-    }
-
-    // mobile assistent container, not visible on desktop
-    .mobile-container {
-        display: none;
     }
 
     // links for the nav
@@ -22,39 +16,41 @@ nav {
         display: flex;
         list-style: none;
         gap: 15px;
+        justify-content: flex-end;
+    }
+
+    // in between div to keep the assistent on the left and the menu on the right
+    .empty-space {
+        flex-grow: 1;
+    }
+
+    // mobile assistent container, visible and in the nav on mobile
+    .mobile-container {
+        display: flex;
+    }
+
+    .mobile-text {
+        // text for virtual assistent (mobile only)
+        .mobile-text-p {
+            background: var(--primary-bg);
+            color: white;
+            padding: 5px;
+            border-radius: 0px 10px 10px 10px;
+        }
+
+        button {
+            background: var(--primary-bg);
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
     }
 }
 
 // tablet or mobile
 @media (max-width: 1150px) {
     nav {
-        .logo-container {
-            flex-grow: 0;
-        }
-
         align-items: center;
-
-        // mobile assistent container, visible and in the nav on mobile
-        .mobile-container {
-            display: flex;
-        }
-
-        .mobile-text {
-            // text for virtual assistent (mobile only)
-            .mobile-text-p {
-                background: var(--primary-bg);
-                color: white;
-                padding: 5px;
-                border-radius: 0px 10px 10px 10px;
-            }
-
-            button {
-                background: var(--primary-bg);
-                color: white;
-                padding: 5px;
-                border-radius: 10px;
-            }
-        }
 
         // only the button containers
         ul {
