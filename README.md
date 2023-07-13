@@ -69,14 +69,13 @@ Voor de herkansing heb ik de volgende features aangepast of toegepast:
 -   [x] De gebruiker kan kiezen uit inputs die al voor geschreven zijn (meestegezochte tags i.p.v. meestgestelde vragen)
 -   [x] De applicatie is volledig responsive (ook de dialog): de hele css is opnieuw gedaan
 
--   [] Verbeterde animatie & tekst van de virtual assistent
--   [] Bij geen resultaten, is er een empty state zichtbaar (tekst en een aanwijzing voor de gebruiker wat ze kunnen doen)
--   [] De virtual assistent helpt de gebruiker bij een empty state (zegt iets)
+-   [x] Verbeterde animatie & tekst van de virtual assistent
+-   [x] Bij geen resultaten, is er een empty state zichtbaar (tekst en een aanwijzing voor de gebruiker wat ze kunnen doen)
+-   [x] De virtual assistent helpt de gebruiker bij een empty state (zegt iets)
 -   [x] Er zijn lottie animaties toegevoegd om het leuk te maken
 -   [x] Er zijn geen enkele bugs meer voor de afbeeldingen
 
 -   [x] De "like" functie werkt
--   [] De "share" functie werkt
 
 Als ik tijd over heb:
 
