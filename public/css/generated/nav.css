@@ -4,6 +4,7 @@ nav {
 }
 nav .logo-container {
   align-items: center;
+  flex-grow: 1;
 }
 nav .logo-container img {
   height: 30px;
@@ -21,8 +22,17 @@ nav ul {
   nav {
     align-items: center;
   }
+  nav .logo-container {
+    flex-grow: 0;
+  }
   nav .mobile-container {
     display: block;
+  }
+  nav .mobile-text {
+    background: var(--primary-bg);
+    color: white;
+    padding: 5px;
+    border-radius: 0px 10px 10px 10px;
   }
   nav ul {
     font-size: 0.8em;

@@ -5,6 +5,7 @@ nav {
     // logo container
     .logo-container {
         align-items: center;
+        flex-grow: 1;
 
         img {
             height: 30px;
@@ -27,11 +28,23 @@ nav {
 // tablet or mobile
 @media (max-width: 1150px) {
     nav {
+        .logo-container {
+            flex-grow: 0;
+        }
+
         align-items: center;
 
         // mobile assistent container, visible and in the nav on mobile
         .mobile-container {
             display: block;
+        }
+
+        // text for virtual assistent (mobile only)
+        .mobile-text {
+            background: var(--primary-bg);
+            color: white;
+            padding: 5px;
+            border-radius: 0px 10px 10px 10px;
         }
 
         // only the button containers

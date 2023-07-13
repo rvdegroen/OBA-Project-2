@@ -8,6 +8,44 @@ const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 const input = document.getElementById('query');
 const lottieIndexAnimation = document.querySelector('.lottie-library');
+const mobileTextForAssistent = document.querySelector('.mobile-text');
+
+// mobile text animation
+if (mobileTextForAssistent) {
+    setTimeout(() => {
+        mobileTextForAssistent.textContent =
+            'Typ hieronder iets in om door de bibliotheek te zoeken.';
+    }, 2500);
+}
+
+// als de muis niet is bewogen, wordt er aan de gebruiker gevraagd of ze er nog zijn.
+if (mobileTextForAssistent) {
+    let mouseTimeout;
+    let touchTimeout;
+
+    function handleMousemove() {
+        clearTimeout(mouseTimeout);
+        clearTimeout(touchTimeout);
+
+        mouseTimeout = setTimeout(function () {
+            mobileTextForAssistent.textContent = 'Ben je er nog?';
+            console.log('De gebruiker is 30 seconden inactief geweest.');
+        }, 10000);
+    }
+
+    function handleTouchstart() {
+        clearTimeout(touchTimeout);
+        clearTimeout(mouseTimeout);
+
+        touchTimeout = setTimeout(function () {
+            mobileTextForAssistent.textContent = 'Ben je er nog?';
+            console.log('De gebruiker is 30 seconden inactief geweest.');
+        }, 10000);
+    }
+
+    document.addEventListener('mousemove', handleMousemove);
+    document.addEventListener('touchstart', handleTouchstart);
+}
 
 // fetch function
 const search = async () => {
