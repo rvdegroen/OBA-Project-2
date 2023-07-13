@@ -3,7 +3,6 @@ nav {
   margin: 20px;
 }
 nav .logo-container {
-  flex-grow: 1;
   align-items: center;
 }
 nav .logo-container img {
@@ -19,6 +18,9 @@ nav ul {
 }
 
 @media (max-width: 1150px) {
+  nav {
+    align-items: center;
+  }
   nav .mobile-container {
     display: block;
   }
@@ -53,5 +55,10 @@ nav ul {
     filter: hue-rotate(280deg) contrast(1.5);
     background-color: transparent;
     color: var(--mobile-hover-text);
+  }
+}
+@media (max-width: 550px) {
+  .logo-container {
+    display: none;
   }
 }/*# sourceMappingURL=nav.css.map */

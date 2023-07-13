@@ -4,7 +4,6 @@ nav {
 
     // logo container
     .logo-container {
-        flex-grow: 1;
         align-items: center;
 
         img {
@@ -28,6 +27,8 @@ nav {
 // tablet or mobile
 @media (max-width: 1150px) {
     nav {
+        align-items: center;
+
         // mobile assistent container, visible and in the nav on mobile
         .mobile-container {
             display: block;
@@ -73,5 +74,12 @@ nav {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 550px) {
+    // hide the oba logo on very small screens, otherwise there's not enough space for the virtual assistent's text
+    .logo-container {
+        display: none;
     }
 }
